@@ -1,16 +1,14 @@
 export interface SearchEngine {
-  inputQuery: string[]
-  sidebarContainerQuery: string[]
-  appendContainerQuery: string[]
+  navbarSelectors: string[]
+  sidebarSelectors: string[]
+  downloadSelectors: string[]
   watchRouteChange?: (callback: () => void) => void
 }
 
 export const config: Record<string, SearchEngine> = {
-  opera: {
-    inputQuery: ['ul.nav-tabs li.uib-tab.nav-item:nth-child(3)'],
-    //'history-tabs > div > div > div > ul > li.uib-tab.nav-item.ng-isolate-scope.active'],
-    // body > div > div.row.view-animate.ng-scope > history-tabs > div > div.margin-bottom-10 > div > ul > li.uib-tab.nav-item.ng-isolate-scope.active
-    // sidebarContainerQuery: ['#pane-side'],
-    // appendContainerQuery: ['#hard_expire_time'],
+  linkedin: {
+    navbarSelectors: ['div.application-outlet div.authentication-outlet div div.hiring-applicants__header-placeholder div div'],
+    sidebarSelectors: ['body > div.application-outlet > div.authentication-outlet > div > div.hiring-applicants__container.neptune-grid > div > div > div.hiring-applicants__list-container > ul'],
+    downloadSelectors: ["body > div.application-outlet > div.authentication-outlet > div > div.hiring-applicants__container.neptune-grid > div > main > div > div:nth-child(3) > div.hiring-resume-viewer__resume-wrapper--collapsed > div.display-flex.justify-space-between.align-items-flex-start.pl5.pr5.pt5.pb3 > a"]
   },
 }
