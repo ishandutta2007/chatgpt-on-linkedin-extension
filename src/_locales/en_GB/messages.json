@@ -1,0 +1,12 @@
+
+{
+  "appName": {
+    "message": "LinkedinGPT - ChatGPT on LinkedIn"
+  },
+  "appDesc": {
+    "message": "ChatGPT on all LinkedIn searches."
+  },
+  "webstoreDesc": {
+    "message": "Are you a recruiter who needs to download lots of CVs from a LinkedIn job post? \n Then this is the right tool for you. It enables you to download all CVs from LinkedIn job applications in one click. \n Disclosure: This app is not affiliated with LinkedIn Corporation."
+  }
+}

@@ -1,0 +1,12 @@
+
+{
+  "appName": {
+    "message": "LinkedinGPT - ChatGPT LinkedInissä"
+  },
+  "appDesc": {
+    "message": "ChatGPT kaikissa LinkedIn-hauissa."
+  },
+  "webstoreDesc": {
+    "message": "Oletko rekrytoija, joka tarvitsee ladata paljon ansioluetteloita LinkedIn-työpaikkailmoituksesta? \n Sitten tämä on oikea työkalu sinulle. Sen avulla voit ladata kaikki ansioluettelot LinkedIn-työpaikkahakemuksista yhdellä napsautuksella. \n Ilmoitus: Tämä sovellus ei ole sidoksissa LinkedIn Corporationiin."
+  }
+}

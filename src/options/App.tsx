@@ -77,7 +77,7 @@ function OptionsPage(props: { theme: Theme; onThemeChange: (theme: Theme) => voi
             Discord
           </a>
           <a
-            href="https://github.com/SingularityLabs-ai/chatgpt-on-addonslinkedin-extension/issues"
+            href="https://github.com/SingularityLabs-ai/chatgpt-on-linkedin-extension/issues"
             target="_blank"
             rel="noreferrer"
           >
@@ -87,7 +87,7 @@ function OptionsPage(props: { theme: Theme; onThemeChange: (theme: Theme) => voi
             Twitter
           </a>
           <a
-            href="https://github.com/SingularityLabs-ai/chatgpt-on-addonslinkedin-extension"
+            href="https://github.com/SingularityLabs-ai/chatgpt-on-linkedin-extension"
             target="_blank"
             rel="noreferrer"
           >

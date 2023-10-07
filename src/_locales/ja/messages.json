@@ -1,0 +1,12 @@
+
+{
+  "appName": {
+    "message": "LinkedinGPT - LinkedIn上のChatGPT"
+  },
+  "appDesc": {
+    "message": "すべてのLinkedIn検索でChatGPTを使用できます。"
+  },
+  "webstoreDesc": {
+    "message": "LinkedInの求人投稿から大量の履歴書をダウンロードする必要がある採用担当者ですか？ \n それなら、これがあなたにぴったりのツールです。LinkedInの求人応募からすべての履歴書をワンクリックでダウンロードできます。 \n 開示：このアプリはLinkedIn Corporationとは提携していません。"
+  }
+}

@@ -294,7 +294,7 @@ function ChatGPTQuery(props: Props) {
               return (
                 <span className="block mt-2">
                   Still not working? Follow{' '}
-                  <a href="https://github.com/SingularityLabs-ai/chatgpt-on-addonslinkedin-extension#troubleshooting">
+                  <a href="https://github.com/SingularityLabs-ai/chatgpt-on-linkedin-extension#troubleshooting">
                     Brave Troubleshooting
                   </a>
                 </span>

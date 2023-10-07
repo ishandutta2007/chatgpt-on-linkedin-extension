@@ -1,0 +1,12 @@
+
+{
+  "appName": {
+    "message": "LinkedinGPT - ChatGPT en LinkedIn"
+  },
+  "appDesc": {
+    "message": "ChatGPT en todas las búsquedas de LinkedIn."
+  },
+  "webstoreDesc": {
+    "message": "¿Eres un reclutador que necesita descargar muchos currículums de una publicación de trabajo de LinkedIn? \n Entonces esta es la herramienta adecuada para ti. Te permite descargar todos los currículums de las solicitudes de empleo de LinkedIn con un solo clic. \n Divulgación: esta aplicación no está afiliada a LinkedIn Corporation."
+  }
+}

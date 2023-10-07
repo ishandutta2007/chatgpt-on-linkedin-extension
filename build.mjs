@@ -26,8 +26,8 @@ async function runEsbuild() {
     bundle: true,
     outdir: outdir,
     treeShaking: true,
-    // minify: true,
-    // drop: ['console', 'debugger'],
+    minify: true,
+    drop: ['console', 'debugger'],
     legalComments: 'none',
     define: {
       'process.env.NODE_ENV': '"production"',
@@ -38,7 +38,9 @@ async function runEsbuild() {
     jsx: 'automatic',
     loader: {
       '.png': 'dataurl',
-      '.svg': 'dataurl',
+      '.ttf': 'dataurl',
+      '.woff': 'dataurl',
+      '.woff2': 'dataurl',
     },
     plugins: [
       postcssPlugin({
@@ -73,7 +75,7 @@ async function build() {
   await deleteOldDir()
   await runEsbuild()
 
-  const commonFiles = [
+  let commonFiles = [
     { src: 'build/content-script/index.js', dst: 'content-script.js' },
     { src: 'build/content-script/index.css', dst: 'content-script.css' },
     { src: 'build/background/index.js', dst: 'background.js' },
@@ -84,12 +86,15 @@ async function build() {
     { src: 'build/popup/index.css', dst: 'popup.css' },
     { src: 'src/popup/index.html', dst: 'popup.html' },
     { src: 'src/logo.png', dst: 'logo.png' },
-    { src: 'src/_locales', dst: '_locales' },
   ]
 
   // chromium
   await copyFiles(
-    [...commonFiles, { src: 'src/manifest.json', dst: 'manifest.json' }],
+    [
+      ...commonFiles,
+      { src: 'src/_locales', dst: '_locales' },
+      { src: 'src/manifest.json', dst: 'manifest.json' },
+    ],
     `./${outdir}/chromium`,
   )
 
@@ -97,11 +102,38 @@ async function build() {
 
   // firefox
   await copyFiles(
-    [...commonFiles, { src: 'src/manifest.v2.json', dst: 'manifest.json' }],
+    [
+      ...commonFiles,
+      { src: 'src/_locales', dst: '_locales' },
+      { src: 'src/manifest.v2.json', dst: 'manifest.json' },
+    ],
     `./${outdir}/firefox`,
   )
 
   await zipFolder(`./${outdir}/firefox`)
+
+  // edge
+  if (fs.existsSync('src/_locales_edge')) {
+    await copyFiles(
+      [
+        ...commonFiles,
+        { src: 'src/_locales_edge', dst: '_locales' },
+        { src: 'src/manifest.json', dst: 'manifest.json' },
+      ],
+      `./${outdir}/edge`,
+    )
+  } else {
+    await copyFiles(
+      [
+        ...commonFiles,
+        { src: 'src/_locales', dst: '_locales' },
+        { src: 'src/manifest.json', dst: 'manifest.json' },
+      ],
+      `./${outdir}/edge`,
+    )
+  }
+
+  await zipFolder(`./${outdir}/edge`)
 
   console.log('Build success.')
 }

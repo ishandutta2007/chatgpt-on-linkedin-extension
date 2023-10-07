@@ -1,0 +1,12 @@
+
+{
+  "appName": {
+    "message": "LinkedinGPT - ChatGPT sur LinkedIn"
+  },
+  "appDesc": {
+    "message": "ChatGPT dans toutes les recherches LinkedIn."
+  },
+  "webstoreDesc": {
+    "message": "Êtes-vous un recruteur qui a besoin de télécharger de nombreux CV à partir d'une offre d'emploi LinkedIn ? \n Alors c'est l'outil qu'il vous faut. Il vous permet de télécharger tous les CV des candidatures aux emplois LinkedIn en un clic. \n Divulgation : Cette application n'est pas affiliée à LinkedIn Corporation."
+  }
+}
